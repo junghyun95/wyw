@@ -18,6 +18,9 @@
                 android:exported="false"/>
         <activity
                 android:name=".MainActivity"
+                android:exported="false"/> <!-- 로그인 페이지가 가장 먼저 작동해야 하기 때문에 JoinActivity를 true로 설정 -->
+        <activity
+                android:name=".LoginActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -39,10 +42,6 @@
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="YOUR_API_KEY"/>
-
-        <activity
-                android:name=".loginActivity"
-                android:exported="false"/>
     </application>
 
 </manifest>
