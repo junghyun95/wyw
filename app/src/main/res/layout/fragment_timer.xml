@@ -16,7 +16,17 @@
             android:text="00 : 00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView6"
-            android:textSize="90dp" app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="80dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:layout_marginTop="36dp"/>
+            android:layout_marginTop="24dp"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button" tools:layout_editor_absoluteY="264dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/button2"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2" tools:layout_editor_absoluteY="264dp"
+            tools:layout_editor_absoluteX="231dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
