@@ -16,10 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
-import com.google.android.gms.location.LocationCallback
-import com.google.android.gms.location.LocationListener
-import com.google.android.gms.location.LocationResult
-import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.*
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
@@ -33,10 +30,6 @@ class RouteRecordFragment : Fragment(), OnMapReadyCallback {
     lateinit var mainActivity: MainActivity
     lateinit var binding: FragmentRouterecordBinding
 
-    var mLocationManager: LocationManager? = null
-    var mLocationListener: LocationListener? = null
-
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mainActivity = context as MainActivity
@@ -49,33 +42,31 @@ class RouteRecordFragment : Fragment(), OnMapReadyCallback {
 
         binding = FragmentRouterecordBinding.inflate(inflater, container, false)
 
-        mLocationManager = mainActivity.getSystemService(LOCATION_SERVICE) as LocationManager
-        mLocationListener = object : LocationListener {
-            override fun onLocationChanged(location: Location) {
-                var lat = 0.0
-                var lng = 0.0
-                if (location != null) {
-                    lat = location.latitude
-                    lng = location.longitude
-                    Log.d("현재 위치", "Lat ${lat}, Long ${lng}")
-                }
-                var currentLocation = LatLng(lat, lng)
-            }
-        }
 
         /* 화면에 지도 띄우기 */
         mView = binding.mapview as MapView
         mView.onCreate(savedInstanceState)
         mView.getMapAsync(this)
-        
+
+
         return binding.root
     }
 
+    @SuppressLint("MissingPermission")
     override fun onMapReady(googleMap: GoogleMap) {
-        val marker = LatLng(37.571919, 126.987316)
-        googleMap.addMarker(MarkerOptions().position(marker).title("하이미디어컴퓨터학원 종로 캠퍼스"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker, 15f))
 
+        /* 현재 위치로 이동 설정(애뮬레이터는 위치 받을 수 없어서 구글 본사로 이동됨) */
+        googleMap.isMyLocationEnabled = true
+
+        /* 디폴트 위치 설정 */
+        val defaultMarker = LatLng(37.571919, 126.987316)
+        googleMap.addMarker(MarkerOptions().position(defaultMarker).title("하이미디어컴퓨터학원 종로 캠퍼스"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultMarker, 15f))
+
+    }
+
+    private fun onMarkerClick() {
+        Log.d("마커이벤트", "동작확인!")
     }
 
     override fun onStart() {
