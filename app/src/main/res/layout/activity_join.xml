@@ -55,20 +55,20 @@
             android:inputType="textPassword"
             android:hint="   비밀번호를 입력하세요."
             android:ems="10"
-            android:id="@+id/passowrd"
+            android:id="@+id/password"
             android:layout_marginTop="12dp"
             app:layout_constraintTop_toBottomOf="@+id/name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.504"/>
     <Button
-            android:text="회원가입"
+            android:text="가입하기"
             android:layout_width="125dp"
             android:layout_height="48dp"
             android:id="@+id/joinButton"
             android:backgroundTint="#80C748"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/cancel_button"
-            app:layout_constraintHorizontal_bias="0.901" app:layout_constraintTop_toBottomOf="@+id/passowrd"
+            app:layout_constraintHorizontal_bias="0.901" app:layout_constraintTop_toBottomOf="@+id/password"
             android:layout_marginTop="24dp"/>
     <Button
             android:text="돌아가기"
@@ -77,6 +77,6 @@
             android:id="@+id/cancel_button"
             android:backgroundTint="#80C748"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="80dp"
-            app:layout_constraintTop_toBottomOf="@+id/passowrd" android:layout_marginTop="24dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/password" android:layout_marginTop="24dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
