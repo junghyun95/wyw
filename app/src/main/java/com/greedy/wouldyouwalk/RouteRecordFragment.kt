@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.greedy.wouldyouwalk.databinding.FragmentRouterecordBinding
-import net.daum.mf.map.api.MapView
 
 class RouteRecordFragment : Fragment() {
 
@@ -26,10 +25,6 @@ class RouteRecordFragment : Fragment() {
     ): View? {
 
         binding = FragmentRouterecordBinding.inflate(inflater, container, false)
-
-        val mapView = MapView(mainActivity)
-        binding.mapView.addView(mapView)
-
 
         return binding.root
     }
