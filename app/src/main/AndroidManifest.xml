@@ -22,7 +22,7 @@
 
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="AIzaSyCqeL5Jeqy7NCOqj9EMgUnHmWyl_fJD7JA"/>
+                android:value="여기에 앱키 추가해야 지도 작동함!"/>
 
         <activity
                 android:name=".JoinActivity"
