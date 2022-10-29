@@ -1,13 +1,12 @@
 package com.greedy.wouldyouwalk
 
-import android.Manifest
-import android.content.pm.PackageManager
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+
 import com.google.android.material.tabs.TabLayoutMediator
 import com.greedy.wouldyouwalk.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +18,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+
+
 
 
 
@@ -35,5 +37,7 @@ class MainActivity : AppCompatActivity() {
             tab.text = tabTitles[position]
         }.attach()
     }
+
+
 
 }

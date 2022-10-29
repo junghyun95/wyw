@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "763488851160-89rj8kq9sgkesc28a1s35e0vfgtb2du1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.greedy.wouldyouwalk",
+            "certificate_hash": "573de03c58079e4996d03d462648c4ecfacbfcd7"
+          }
+        },
+        {
           "client_id": "763488851160-a8m44h4scqskr3286t6qp8bvhr1db1ih.apps.googleusercontent.com",
           "client_type": 3
         }

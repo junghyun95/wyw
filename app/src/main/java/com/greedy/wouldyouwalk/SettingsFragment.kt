@@ -88,6 +88,7 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
+    /* 위치 권한 응답 */
     override fun onRequestPermissionsResult(requestCode: Int,
                                             permissions: Array<String>, grantResults: IntArray) {
         when (requestCode) {
@@ -95,18 +96,10 @@ class SettingsFragment : Fragment() {
                 // If request is cancelled, the result arrays are empty.
                 if ((grantResults.isNotEmpty() &&
                             grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-
-                } else {
-
+                    return
                 }
-                return
             }
 
-            // Add other 'when' lines to check for other
-            // permissions this app might request.
-            else -> {
-                // Ignore all other requests.
-            }
         }
     }
 
