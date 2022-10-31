@@ -26,7 +26,7 @@
 
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="앱키 제거"/>
+                android:value="AIzaSyCqeL5Jeqy7NCOqj9EMgUnHmWyl_fJD7JA"/>
 
         <activity
                 android:name=".JoinActivity"
