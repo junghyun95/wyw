@@ -9,5 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="wywColor">#82BE47</color>
-    <color name="tagBtn">#98D959</color>
+    <color name="tagBtn1">#98D959</color>
+    <color name="tagBtn2">#B8E38D</color>
+    <color name="tagBtn3">#8CCC4D</color>
+    <color name="tagBtn4">#A8E071</color>
+    <color name="tagBtn5">#C0E999</color>
+
 </resources>

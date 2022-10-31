@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.*
 import com.greedy.wouldyouwalk.databinding.FragmentRouterecordBinding
@@ -38,6 +39,12 @@ class RouteRecordFragment : Fragment(), OnMapReadyCallback {
         mView.onCreate(savedInstanceState)
         mView.getMapAsync(this)
 
+        binding.testBtn1.setOnClickListener {Toast.makeText(mainActivity, "앗, 업데이트 준비 중인 코스입니다!", Toast.LENGTH_SHORT).show() }
+        binding.testBtn2.setOnClickListener {Toast.makeText(mainActivity, "앗, 업데이트 준비 중인 코스입니다!", Toast.LENGTH_SHORT).show() }
+        binding.testBtn3.setOnClickListener {Toast.makeText(mainActivity, "앗, 업데이트 준비 중인 코스입니다!", Toast.LENGTH_SHORT).show() }
+        binding.testBtn4.setOnClickListener {Toast.makeText(mainActivity, "앗, 업데이트 준비 중인 코스입니다!", Toast.LENGTH_SHORT).show() }
+        binding.testBtn5.setOnClickListener {Toast.makeText(mainActivity, "앗, 업데이트 준비 중인 코스입니다!", Toast.LENGTH_SHORT).show() }
+
         return binding.root
     }
 
@@ -56,7 +63,7 @@ class RouteRecordFragment : Fragment(), OnMapReadyCallback {
 
             val walk1s = LatLng(37.572148, 126.986763)
             googleMap.addMarker(MarkerOptions().position(walk1s).title("📍 인사동길")
-                     .snippet("인사동길 탐방 고고🧐").icon(BitmapDescriptorFactory.fromResource(R.drawable.mapicon2)))
+                .snippet("인사동길 탐방 고고🧐").icon(BitmapDescriptorFactory.fromResource(R.drawable.mapicon2)))
 
             val walk1a = LatLng(37.575646, 126.982810)
             googleMap.addMarker(MarkerOptions().position(walk1a).title("📍 열린녹지광장")
