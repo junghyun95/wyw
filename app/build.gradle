@@ -46,8 +46,13 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation platform('com.google.firebase:firebase-bom:31.0.2') //전화번호 인증
     implementation 'com.google.firebase:firebase-auth-ktx'
-    implementation 'com.google.android.gms:play-services-auth:20.1.0' //구글 로그인 연동을 위한 service 종속
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.0'
+    implementation 'com.google.android.gms:play-services-auth:20.3.0' //구글 로그인 연동을 위한 service 종속
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
+
+    /* 레트로핏 */
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     /* ------------------------------ */
 

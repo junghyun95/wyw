@@ -4,6 +4,74 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".MainFragment">
+    <RelativeLayout
+            android:id="@+id/mainContainer"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:id="@+id/addressContainer"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/address"
+                    android:textSize="24sp"
+                    android:text="Location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/updated_at"
+                    android:textSize="14sp"
+                    android:text="Update at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/overviewContainer"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/status"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:text="맑음"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/temp"
+                    android:textSize="90sp"
+                    android:fontFamily="sans-serif-thin"
+                    android:layout_gravity="center"
+                    android:text="24°C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/temp_min"
+                        android:text="Min temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <Space android:layout_width="50dp"
+                       android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/temp_max"
+                        android:text="Max Temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
 
     <TextView
             android:layout_width="wrap_content"
