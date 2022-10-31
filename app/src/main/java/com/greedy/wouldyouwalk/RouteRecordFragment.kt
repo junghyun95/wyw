@@ -29,25 +29,6 @@ class RouteRecordFragment : Fragment(), OnMapReadyCallback {
         savedInstanceState: Bundle?
     ): View? {
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment routerecord.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RouteRecordFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-
         binding = FragmentRouterecordBinding.inflate(inflater, container, false)
 
         val googleMap: GoogleMap
@@ -106,7 +87,7 @@ class RouteRecordFragment : Fragment(), OnMapReadyCallback {
                 .snippet("고즈넉한 한옥을 구경할 수 있어~🍀").icon(BitmapDescriptorFactory.fromResource(R.drawable.mapicon5)))
 
             val walk2 = LatLng(37.581906, 126.984023)
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(walk2, 17f))
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(walk2, 17.5f))
 
             val polylineOption = PolylineOptions().color(Color.argb(117, 59, 100, 1))
                 .add(LatLng(37.581434, 126.985007))
