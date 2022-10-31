@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val fragmentList = listOf(RouteRecordFragment(), TimerFragment(), MainFragment(), ParkInfoFragment(), SettingsFragment())
+        val fragmentList = listOf(MainFragment(), TimerFragment(), RouteRecordFragment(), ParkInfoFragment(), SettingsFragment())
 
         val adapter = FragmentAdapter(this)
         adapter.fragmentList = fragmentList
 
         binding.viewPager.adapter = adapter
 
-        var tabTitles = listOf<String>("경로기록", "산책기록", "메인", "공원정복", "설정")
+        var tabTitles = listOf<String>("메인", "산책기록", "경로기록", "공원정복", "설정")
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.text = tabTitles[position]

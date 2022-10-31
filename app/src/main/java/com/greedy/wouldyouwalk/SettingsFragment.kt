@@ -24,7 +24,6 @@ import com.greedy.wouldyouwalk.databinding.FragmentSettingsBinding
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 private lateinit var auth: FirebaseAuth
-val LOCATION_PERMISSION_ACCESS = 100
 
 /**
  * A simple [Fragment] subclass.
@@ -65,17 +64,7 @@ class SettingsFragment : Fragment() {
 
         }
 
-        /* 위치권한 허가 처리 */
-        binding.locationButton.setOnClickListener {
-            if(ActivityCompat.checkSelfPermission(mainActivity, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-            || ActivityCompat.checkSelfPermission(mainActivity, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                var permissions = arrayOf(
-                    android.Manifest.permission.ACCESS_FINE_LOCATION,
-                    android.Manifest.permission.ACCESS_COARSE_LOCATION
-                )
-                ActivityCompat.requestPermissions(mainActivity, permissions, LOCATION_PERMISSION_ACCESS)
-            }
-        }
+
 
         /* 업데이트 버튼 클릭시 */
         binding.updButton.setOnClickListener {
@@ -88,20 +77,9 @@ class SettingsFragment : Fragment() {
         return binding.root
     }
 
-    /* 위치 권한 응답 */
-    override fun onRequestPermissionsResult(requestCode: Int,
-                                            permissions: Array<String>, grantResults: IntArray) {
-        when (requestCode) {
-            LOCATION_PERMISSION_ACCESS -> {
-                // If request is cancelled, the result arrays are empty.
-                if ((grantResults.isNotEmpty() &&
-                            grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                    return
-                }
-            }
 
-        }
-    }
+
+
 
     lateinit var mainActivity: MainActivity
     override fun onAttach(context: Context) {
